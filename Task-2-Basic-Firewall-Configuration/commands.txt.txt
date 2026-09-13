@@ -1,0 +1,23 @@
+# Update package information
+sudo apt update
+
+# Install UFW
+sudo apt install -y ufw
+
+# Check initial firewall status
+sudo ufw status verbose
+
+# Deny incoming connections by default
+sudo ufw default deny incoming
+
+# Allow outgoing connections by default
+sudo ufw default allow outgoing
+
+# Allow SSH traffic
+sudo ufw allow ssh
+
+# Enable the firewall
+sudo ufw enable
+
+# Verify the final firewall configuration
+sudo ufw status verbose
